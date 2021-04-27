@@ -1,6 +1,5 @@
-import "./tailwindcss/style.css";
-import { useState } from "react";
 import Routes from "./routes";
+import "./tailwindcss/style.css";
 
 function App() {
   return (
