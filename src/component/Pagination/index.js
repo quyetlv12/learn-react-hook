@@ -19,7 +19,7 @@ function Pagination(props) {
   }
     return (
         <div>
-          <button disabled={_page >= 1} onClick={()=>handleChangePage(_page - 1)}>NEXT</button>
+          <button className="bg bg-gray-500" disabled={_page >= 1} onClick={()=>handleChangePage(_page - 1)}>NEXT</button>
           <button disabled={_page >= totalPages} onClick={()=>handleChangePage(_page + 1)}>PREV</button>
         </div>
     );
