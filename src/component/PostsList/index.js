@@ -13,7 +13,7 @@ function PostsList(props) {
         <div>
             <ul>
                 {posts.map(post=>(
-                    <li key={post.id}>{post.title}</li>
+                    <li key={post._id} data-id={post._id}>{post.name}</li>
                 ))}
             </ul>
         </div>

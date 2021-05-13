@@ -26,13 +26,17 @@ export const TodoList = () => {
     setTodolist(newTodoList)
     console.log(todolist);
   };
+  const editTodoList = (e) =>{
+    console.log(e.target.value);
+  }
   return (
-    <div>
-      <h1>TO DO LIST APP FUC</h1>
+    <div className="container px-16">
+      <h1 className="flex justify-center">TO DO LIST APP FUC</h1>
       <FormAddTodo onSubmit={handleTodoSubmit}></FormAddTodo>
       <TodoListTask
         todos={todolist}
         onTodoClick={handleTodoClick}
+        editTask={editTodoList}
       ></TodoListTask>
     </div>
   );

@@ -17,16 +17,23 @@ function FormAddTodo(props) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!onSubmit) return
+    if (!onSubmit) return;
     const formValues = {
-        title : value
-    }
-    onSubmit(formValues)
-    setValue('')
+      title: value,
+    };
+    onSubmit(formValues);
+    setValue("");
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={value} onChange={handleChangeValue} />
+      <div className="my-5 text-sm">
+        <input 
+        className="border border-black w-100"
+          type="text"
+          value={value}
+          onChange={handleChangeValue}
+        />
+      </div>
     </form>
   );
 }
