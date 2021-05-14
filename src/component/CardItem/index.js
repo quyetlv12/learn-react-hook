@@ -7,7 +7,6 @@ CardItem.propTypes = {
 CardItem.defaultProps = {
   cart: [],
 };
-
 function CardItem(props) {
   const { cart } = props;
   return (
