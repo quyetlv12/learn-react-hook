@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardItem from "../CardItem";
 import Pagination from "../Pagination";
+import ProductAPI from '../../api/ProductApi';
 const Card = () => {
   const [product, setProduct] = useState();
   const [pagination, setPagination] = useState({
@@ -13,11 +14,12 @@ const Card = () => {
   });
   useEffect(() => {
     async function API_heaphone() {
-      const url_API = `https://headphoneapi.herokuapp.com/api/products?page=1&limit=4`;
-      const response = await fetch(url_API);
-      const result = await response.json();
-      const data = result;
-      const pagination = result;
+      // const url_API = `https://headphoneapi.herokuapp.com/api/products?page=1&limit=4`;
+      // const response = await fetch(url_API);
+      // const result = await response.json();
+      // const data = result;
+      // const pagination = result;
+      const {data} = await ProductAPI.getAllProducts();
       setProduct(data);
       setPagination(pagination)
     }
